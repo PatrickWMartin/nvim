@@ -3,6 +3,8 @@ vim.cmd("set tabstop=4")
 vim.cmd("set softtabstop=4")
 vim.cmd("set shiftwidth=4")
 vim.cmd("set number")
+vim.cmd("set timeoutlen=1000")
+vim.cmd("set relativenumber")
 vim.g.mapleader = " "
 vim.g.maplocalleader = ' '
 
@@ -46,6 +48,7 @@ vim.keymap.set('n', '<leader>k', '<C-w>k',{desc = '[W]indow [K]Up'})
 vim.keymap.set('n', '<leader>l', '<C-w>l',{desc = '[W]indow [L]Right'})
 vim.keymap.set('n', '{', '{zz',{})
 vim.keymap.set('n', '}', '}zz',{})
+vim.keymap.set('n', '<leader>n', ':set relativenumber!<CR>',{})
 vim.o.hlsearch = false
 vim.o.clipboard = 'unnamedplus'
 vim.o.ignorecase = true
