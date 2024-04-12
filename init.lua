@@ -7,7 +7,7 @@ vim.cmd("set timeoutlen=1000")
 vim.cmd("set relativenumber")
 vim.g.mapleader = " "
 vim.g.maplocalleader = ' '
-
+vim.opt.mouse = ""
 -- Lazy
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
