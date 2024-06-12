@@ -49,7 +49,7 @@ vim.keymap.set('n', '<leader>l', '<C-w>l',{desc = '[W]indow [L]Right'})
 vim.keymap.set('n', '{', '{zz',{})
 vim.keymap.set('n', '}', '}zz',{})
 vim.keymap.set('n', '<leader>n', ':set relativenumber!<CR>',{})
-vim.keymap.set('n', '<leader>c', ':bd',{'[C]lose Buffer'})
+vim.keymap.set('n', '<leader>d', ':bd',{desc = '[D]elete Buffer'})
 vim.o.hlsearch = false
 vim.o.clipboard = 'unnamedplus'
 vim.o.ignorecase = true
