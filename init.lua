@@ -50,6 +50,10 @@ vim.keymap.set('n', '{', '{zz',{})
 vim.keymap.set('n', '}', '}zz',{})
 vim.keymap.set('n', '<leader>n', ':set relativenumber!<CR>',{})
 vim.keymap.set('n', '<leader>d', ':bd<CR>',{desc = '[D]elete Buffer'})
+vim.keymap.set('i', '<C-h>', '<Left>', {})
+vim.keymap.set('i', '<C-j>', '<Down>', {})
+vim.keymap.set('i', '<C-k>', '<C-o>gk', {})
+vim.keymap.set('i', '<C-l>', '<Right>', {})
 vim.o.hlsearch = false
 vim.o.clipboard = 'unnamedplus'
 vim.o.ignorecase = true
