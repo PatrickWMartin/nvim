@@ -8,6 +8,14 @@ vim.cmd("set relativenumber")
 vim.g.mapleader = " "
 vim.g.maplocalleader = ' '
 vim.opt.mouse = ""
+
+vim.api.nvim_create_autocmd('TextYankPost', {
+  desc = 'Highlight when yanking (copying) text',
+  group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+})
 -- Lazy
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -25,16 +33,9 @@ vim.opt.rtp:prepend(lazypath)
 local opts = {}
 
 require("lazy").setup("plugins")
-require('onedark').setup {style = 'deep'}
-require('onedark').load()
+-- require('onedark').setup {style = 'deep'}
+-- require('onedark').load()
 
---Treesitter
-local config = require('nvim-treesitter.configs')
-config.setup({
-  auto_install = true,
-  highlight = {enable = true},
-  indent = {enable = true},
-})
 --Neotree
 vim.keymap.set('n', '<leader>rt',':Neotree filesystem reveal left<CR>', {desc='[R]eveal Filesystem [T]ree'})
 --Custom keymaps
